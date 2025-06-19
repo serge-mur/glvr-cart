@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart + Checkout</title>
+    <link rel="stylesheet" href="css/minireset.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+    <div class="cart">
+        <div class="cart__header cart-header">
+            <div class="true-container">
+                <div class="cart-header__wrapper">
+                    <a href="#" class="cart-header__back">Вернуться к покупкам</a>
+                    <img src="img/GM_Logo.svg" class="cart-header__logo" alt="logo">
+                    <nav class="cart-header__nav">
+                        <a href="#" class="cart-header__nav-item">Доставка и оплата</a>
+                        <a href="#" class="cart-header__nav-item">Рассрочка</a>
+                        <a href="#" class="cart-header__nav-item">Возврат</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="true-container">
+            <div class="cart__wrapper">
+                <div class="cart__main">
+                    <h1 class="cart__title">Оформление заказа</h1>
+                    <div class="cart__order order">
+
+                        <div class="order__header">
+                            <div class="order__title"><span>Состав заказа</span><span class="order__count">2 товара</span></div>
+                            <button class="order__share">
+                                <span>Поделиться корзиной</span>
+                                <svg height="20" width="20"><use xlink:href="img/sprites.svg#share"></use></svg>
+                            </button>
+                        </div>
+
+                        <div class="order__products products active">
+
+                            <button class="products__header">
+                                Выбранные товары
+                            </button>
+
+                            <div class="products__wrapper">
+
+                                <div class="products__alert products__alert_info">
+                                    <svg class="products__alert-icon" height="20" width="20"><use xlink:href="img/sprites.svg#info"></use></svg>
+                                    <span class="products__alert-text">Если в заказе больше 20 товаров, примерка недоступна и нужно выкупить весь заказ или полностью отказаться от него. <a href="#"> Подробнее</a></span>
+                                </div>
+
+                                <div class="products__alert products__alert_error">
+                                    <svg class="products__alert-icon" height="20" width="20"><use xlink:href="img/sprites.svg#weight"></use></svg>
+                                    <span class="products__alert-text">Превышен лимит товаров. Оплата при получении будет недоступна. <a href="#">Отложить часть товаров</a></span>
+                                </div>  
+                                
+                                <div class="products__list">
+                                    <div class="products__item">1</div>
+                                    <div class="products__item">2</div>
+                                    <div class="products__item">3</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="cart__total">
+                    123
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
