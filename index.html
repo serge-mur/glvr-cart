@@ -27,14 +27,16 @@
         <div class="true-container">
             <div class="cart__wrapper">
                 <div class="cart__main">
+                    
                     <h1 class="cart__title">Оформление заказа</h1>
+                    
                     <div class="cart__order order">
 
                         <div class="order__header">
                             <div class="order__title"><span>Состав заказа</span><span class="order__count">2 товара</span></div>
                             <button class="order__share">
                                 <span>Поделиться корзиной</span>
-                                <svg height="20" width="20"><use xlink:href="img/sprites.svg#share"></use></svg>
+                                <svg class="sprite20"><use xlink:href="img/sprites.svg#share"></use></svg>
                             </button>
                         </div>
 
@@ -47,29 +49,193 @@
                             <div class="products__wrapper">
 
                                 <div class="products__alert products__alert_info">
-                                    <svg class="products__alert-icon" height="20" width="20"><use xlink:href="img/sprites.svg#info"></use></svg>
+                                    <svg class="products__alert-icon sprite20"><use xlink:href="img/sprites.svg#info"></use></svg>
                                     <span class="products__alert-text">Если в заказе больше 20 товаров, примерка недоступна и нужно выкупить весь заказ или полностью отказаться от него. <a href="#"> Подробнее</a></span>
                                 </div>
 
                                 <div class="products__alert products__alert_error">
-                                    <svg class="products__alert-icon" height="20" width="20"><use xlink:href="img/sprites.svg#weight"></use></svg>
+                                    <svg class="products__alert-icon sprite20"><use xlink:href="img/sprites.svg#weight"></use></svg>
                                     <span class="products__alert-text">Превышен лимит товаров. Оплата при получении будет недоступна. <a href="#">Отложить часть товаров</a></span>
                                 </div>  
                                 
                                 <div class="products__list">
-                                    <div class="products__item">1</div>
-                                    <div class="products__item">2</div>
-                                    <div class="products__item">3</div>
+                                    <div class="products__item">
+                                        <div class="products__img">
+                                            <img src="img/products_img.webp" alt="">
+                                        </div>
+                                        <div class="products__title">Синий удлиненный жилет для девочки</div>
+                                        <div class="products__price price">
+                                            <div class="price__actual">1 299 р.</div>
+                                            <div class="price__old">6 699 ₽</div>
+                                        </div>                                        
+                                        <div class="products__info">
+                                            <div class="products__size">Размер: 134</div>
+                                            <div class="products__articul">APT. 12011BJC1207</div>                                                
+                                        </div>
+                                        <div class="products__count">
+                                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
+                                            <div class="count__value">1 шт.</div>
+                                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
+                                        </div>
+                                        <div class="products__control">
+                                            <button class="products__favorite">
+                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
+                                            </button>
+                                            <button class="products__trash">
+                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="products__item">
+                                        <div class="products__img">
+                                            <img src="img/products_img.webp" alt="">
+                                        </div>
+                                        <div class="products__title">Синий удлиненный жилет для девочки</div>
+                                        <div class="products__price price">
+                                            <div class="price__actual">1 299 р.</div>
+                                            <div class="price__old">6 699 ₽</div>
+                                        </div>                                        
+                                        <div class="products__info">
+                                            <div class="products__size">Размер: 134</div>
+                                            <div class="products__articul">APT. 12011BJC1207</div>                                                
+                                        </div>
+                                        <div class="products__count">
+                                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
+                                            <div class="count__value">1 шт.</div>
+                                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
+                                        </div>
+                                        <div class="products__control">
+                                            <button class="products__favorite">
+                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
+                                            </button>
+                                            <button class="products__trash">
+                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="order__products products active">
+
+                            <button class="products__header">
+                                Отложенные товары
+                            </button>
+
+                            <div class="products__wrapper">
+                               
+                                <div class="products__list">
+                                    <div class="products__item">
+                                        <div class="products__img">
+                                            <img src="img/products_img.webp" alt="">
+                                        </div>
+                                        <div class="products__title">Синий удлиненный жилет для девочки</div>
+                                        <div class="products__price price">
+                                            <div class="price__not-available">Нет в наличии</div>
+                                        </div>                                        
+                                        <div class="products__info">
+                                            <div class="products__size">Размер: 134</div>
+                                            <div class="products__articul">APT. 12011BJC1207</div>                                                
+                                        </div>
+                                        <div class="products__count">
+                                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
+                                            <div class="count__value">1 шт.</div>
+                                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
+                                        </div>
+                                        <div class="products__control">
+                                            <button class="products__favorite">
+                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
+                                            </button>
+                                            <button class="products__trash">
+                                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
 
                     </div>
+
+                    <div class="cart__person person">
+                        
+                        <div class="person__title subtitle">Получатель</div>
+                        
+                        <div class="person__card">
+                            <form action="" class="person__form person-form">
+                                <div class="person-form__title">Авторизуйтесь, чтобы получить все скидки</div>
+                                <input type="text" name="name" class="person-form__input" placeholder="Введите телефон или e-mail *">
+                                <button class="person-form__btn">Получить код подтверждения</button>
+                            </form>
+                        </div>
+
+                        <div class="person__info">
+                            <div class="person__grid">
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="phone" id="phone" class="cart-input__input" placeholder="Номер телефона" required>
+                                        <label for="phone" class="cart-input__label">Номер телефона *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>                            
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="email" id="email" class="cart-input__input" placeholder="Ваш E-mail" required>
+                                        <label for="email" class="cart-input__label">Ваш E-mail *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>
+
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="first_name" id="first_name" class="cart-input__input" placeholder="Имя" required>
+                                        <label for="first_name" class="cart-input__label">Имя *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>
+                                <div class="cart-input">
+                                    <div class="cart-input__wrapper">
+                                        <input type="text" name="second_name" id="second_name" class="cart-input__input" placeholder="Фамилия" required>
+                                        <label for="second_name" class="cart-input__label">Фамилия *</label>                                    
+                                    </div>
+                                    <div class="cart-input__err">Поле обязательно для заполнения</div>
+                                </div>                                
+                            </div>
+                            <div class="person__checkbox">
+                                <div class="cart-checkbox">
+                                    <input type="checkbox" id="subscribe" class="cart-checkbox__input">
+                                    <label for="subscribe" class="cart-checkbox__label">Подписаться на рассылки</label>
+                                </div>
+                                <div class="cart-checkbox">
+                                    <input type="checkbox" id="other_person" class="cart-checkbox__input">
+                                    <label for="other_person" class="cart-checkbox__label">Получать буду не я</label>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__delivery delivery">
+                        <div class="delivery__title subtitle">Способ получения</div>
+                        <div class="delivery__change-box">
+                            <div class="change-box__item">
+                                <input type="radio" id="courier" class="change-box__input" name="delivery" value="courier">
+                                <label for="courier" class="change-box__label">Доставка курьером</label>                                
+                            </div>
+                            <div class="change-box__item">
+                                <input type="radio" id="pickup" class="change-box__input" name="delivery" value="pickup">
+                                <label for="pickup" class="change-box__label">Самовывоз из пункта выдачи</label>                                
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
                 <div class="cart__total">
                     123
                 </div>
+
             </div>
         </div>
     </div>
