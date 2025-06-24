@@ -218,17 +218,118 @@
 
                     <div class="cart__delivery delivery">
                         <div class="delivery__title subtitle">Способ получения</div>
-                        <div class="delivery__change-box">
-                            <div class="change-box__item">
-                                <input type="radio" id="courier" class="change-box__input" name="delivery" value="courier">
-                                <label for="courier" class="change-box__label">Доставка курьером</label>                                
+                        <div class="delivery__change-wrapper">
+                            <div class="delivery__change-box">
+                                <div class="change-box__item">
+                                    <input type="radio" id="courier" class="change-box__input" name="delivery" value="courier">
+                                    <label for="courier" class="change-box__label">Доставка курьером</label>                                
+                                </div>
+                                <div class="change-box__item">
+                                    <input type="radio" id="pickup" class="change-box__input" name="delivery" value="pickup">
+                                    <label for="pickup" class="change-box__label">Самовывоз из пункта выдачи</label>                                
+                                </div>
                             </div>
-                            <div class="change-box__item">
-                                <input type="radio" id="pickup" class="change-box__input" name="delivery" value="pickup">
-                                <label for="pickup" class="change-box__label">Самовывоз из пункта выдачи</label>                                
+                            <div class="delivery__change-adress change-adress">
+                                <div class="change-adress__title">Адрес доставки:</div>
+                                <div class="change-adress__wrapper">
+                                    <div class="change-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <button class="change-adress__btn">Изменить</button>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <button class="find-address">
+                            <svg class="sprite20"><use xlink:href="img/sprites.svg#marker"></use></svg>
+                            <span>Определить мой адрес</span>
+                        </button>
+
+                        <div class="delivery__grid">
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="city" id="city" class="cart-input__input" placeholder="Город" required>
+                                    <label for="city" class="cart-input__label">Город *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div>                            
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="street" id="street" class="cart-input__input" placeholder="Улица" required>
+                                    <label for="street" class="cart-input__label">Улица *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div>
+
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="house" id="house" class="cart-input__input" placeholder="Дом" required>
+                                    <label for="house" class="cart-input__label">Дом *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div>
+                            <div class="cart-input">
+                                <div class="cart-input__wrapper">
+                                    <input type="text" name="flat" id="flat" class="cart-input__input" placeholder="Квартира" required>
+                                    <label for="flat" class="cart-input__label">Квартира *</label>                                    
+                                </div>
+                                <div class="cart-input__err">Поле обязательно для заполнения</div>
+                            </div> 
+                            <textarea class="cart-textarea" id="comment" name="comment" rows="5" placeholder="Комментарий для курьера"></textarea>                               
+                        </div>
+
+                        <div class="delivery__change-courier change-courier">
+                            <div class="change-courier__item change-card">
+                                <input id="delivery_courier1" type="radio" name="courierType" class="change-courier__input change-card__input" value="" checked="">
+                                <label for="delivery_courier1" class="change-courier__label change-card__label">
+                                    <div class="change-courier__top">
+                                        <div class="change-courier__name change-card__name">Курьером Dalli</div>
+                                        <div class="change-courier__price">300₽</div>
+                                    </div>
+                                    <div class="change-courier__bottom">
+                                        <div class="change-courier__period">от 2х дней</div>
+                                        <div class="change-courier__return">Возврат в течении 14 дней</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-courier__item change-card">
+                                <input id="delivery_courier2" type="radio" name="courierType" class="change-courier__input change-card__input" value="" checked="">
+                                <label for="delivery_courier2" class="change-courier__label change-card__label">
+                                    <div class="change-courier__top">
+                                        <div class="change-courier__name change-card__name">Курьером Dalli</div>
+                                        <div class="change-courier__price">Бесплатно</div>
+                                    </div>
+                                    <div class="change-courier__bottom">
+                                        <div class="change-courier__period">от 2х дней</div>
+                                        <div class="change-courier__return">Возврат в течении 14 дней</div>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="delivery__date-time date-time">
+                        <div class="date-time__title subtitle">Дата и время доставки</div>
+                        custom selects
+                    </div>
+
+                    <div class="delivery__payment payment">
+                        <div class="payment__title subtitle">Оплата</div>
+                        <div class="payment__change">
+                            <div class="payment__item">
+                                <input id="payment_1" type="radio" name="payment" class="payment__input" value="" checked="">
+                                <label for="payment_1" class="payment__label">
+                                    <div class="payment__top">
+                                        <div class="payment__name">Онлайн</div>
+                                        <div class="payment__logo"></div>
+                                    </div>
+                                    <div class="payment__info">Оплата на сайте</div>
+                                </label>
                             </div>
                         </div>
                     </div>
+
+
 
                 </div>
 

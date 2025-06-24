@@ -40,4 +40,8 @@
         <rect y="10" width="21" height="1" fill="#52525B"/>
         <rect x="10" width="1" height="21" fill="#52525B"/>
     </symbol>
+    <symbol id="marker" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 19C7.49971 15.9378 3 12.2726 3 8C3 4.13401 6.13401 1 10 1C13.866 1 17 4.13401 17 8C17 12.2726 12.5003 15.9378 10 19Z" stroke="#52525B"/>
+        <circle cx="10" cy="8" r="2.5" stroke="#52525B"/>
+    </symbol>
 </svg>

@@ -430,6 +430,8 @@ button {
 .cart-input__wrapper {
     position: relative;
 }
+
+/* input */
 .cart-input__input {
     width: 100%;
     height: 50px;
@@ -482,18 +484,79 @@ button {
     padding-top: 10px;
     display: none;
 }
+/* textarea - доработать */
+.cart-textarea {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    resize: none;
+    padding: 13px 16px;
+}
+.cart-textarea:focus-visible {
+    outline: none;
+}
+.cart-textarea::placeholder {
+    font-family: 'Graphik LCG', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+/* checkbox */
 .person__checkbox {
     display: flex;
     gap: 32px;
 }
+.cart-checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.cart-checkbox__input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--gray1-color);
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    margin: 0;
+}
+.cart-checkbox__input:checked {
+    background-color: var(--gray1-color);
+    border-color: var(--gray1-color);
+    background: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5L5 8.5L11 1" stroke="white"/></svg>') no-repeat center center var(--gray1-color);
+}
+.cart-checkbox__input:hover:not(:disabled) {
+    border-color: var(--gray1-color);
+}
+.cart-checkbox__input:focus {
+    outline: none;
+    border-color: var(--gray1-color);
+}
+.cart-checkbox__input:disabled {
+    filter: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.cart-checkbox__input:disabled ~ .cart-checkbox__label {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* delivery */
+.delivery__change-wrapper {
+    background-color: var(--back-color);   
+    padding: 20px;    
+    border-radius: 4px;   
+    margin-bottom: 24px;  
+}
 .delivery__change-box {
-    background-color: var(--back-color);
     display: flex;
     justify-content: space-between;
-    border-radius: 4px;
     gap: 20px;
-    padding: 20px;
 }
 .change-box__item {
     width: 100%;
@@ -520,6 +583,148 @@ button {
     color: #fff;
     transition: 0.25s;
 }
+
+.delivery__change-adress {
+}
+.change-adress {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-top: 20px;
+}
+.change-adress__title {
+    color: var(--gray1-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;
+}
+.change-adress__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 44px;
+}
+.change-adress__adress {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.change-adress__btn {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: underline;
+}
+
+/* find address */
+.find-address {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 24px;
+}
+
+.delivery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.delivery__grid .cart-textarea {
+    grid-column: span 2;
+}
+
+/* change courier */
+.delivery__change-courier {
+}
+.change-courier {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 52px;
+}
+.change-courier__item, .change-card {
+    width: 100%;
+}
+.change-courier__input, .change-card__input {
+    display: none;
+}
+.change-courier__label, .change-card__label {
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+}
+.change-courier__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.change-courier__name, .change-card__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.change-courier__name::before, .change-card__name::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="%23D4D4D8"/></svg>') no-repeat center center;
+}
+.change-courier__price {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.change-courier__bottom {
+    display: flex;
+    gap: 4px;
+}
+.change-courier__period,
+.change-courier__return {
+    background-color: var(--back-color);
+    border-radius: 40px;
+    color: var(--button-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 3px 8px 3px 26px;
+    background-repeat: no-repeat;
+    background-position: left 8px center;
+}
+.change-courier__period {
+    background-image: url('data:image/svg+xml,<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7.5" r="4.5" stroke="%233F3F46"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 4.5H7.5V7H10V8H6.5L6.5 4.5Z" fill="%233F3F46"/></svg>');
+}
+.change-courier__return {
+    background-image: url('data:image/svg+xml,<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1432 6.80059C10.8085 4.81434 9.08041 3.30059 7.0001 3.30059C5.44479 3.30059 4.08854 4.14496 3.36229 5.40059H4.5501H4.9001V6.10059H4.5501H3.03854H2.4501H2.30354H2.1001V5.75059V3.65059V3.30059H2.8001V3.65059V4.97402C3.6576 3.55215 5.21729 2.60059 7.0001 2.60059C9.4676 2.60059 11.5107 4.42496 11.8498 6.80059H11.1432ZM7.0001 11.7006C8.55541 11.7006 9.91166 10.8562 10.6379 9.60059H9.44572H9.09572V8.90059H9.44572H10.9617H11.5457H11.6967H11.8957V9.25059V11.3506V11.7006H11.1957V11.3506V10.0337C10.3382 11.4512 8.78072 12.4006 7.0001 12.4006C4.5326 12.4006 2.48947 10.5762 2.15041 8.20059H2.85916C3.19166 10.1868 4.91979 11.7006 7.0001 11.7006Z" fill="%233F3F46"/></svg>');
+}
+.change-courier__input:checked + .change-courier__label {
+    border-color: var(--main-color);
+}
+.change-courier__input:checked + .change-courier__label .change-courier__name:before,
+.change-card__input:checked + .change-card__label .change-card__name:before {
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" rx="10" fill="%2352525B"/><circle cx="10" cy="10" r="3" fill="white"/></svg>') no-repeat center center;
+}
+
+/* date time */
+
+/* payment */
+
+
 
 /* cart total */
 .cart__total {
