@@ -29,7 +29,15 @@
                 <div class="cart__main">
                     
                     <h1 class="cart__title">Оформление заказа</h1>
-                    
+
+                    <div class="test">
+                        <div class="subtitle">test</div>
+                        <div>
+                            <a href="javascript:void(0)" class="offcanvas-link" data-target="return-goods">Возврат товара</a>
+                            <a href="javascript:void(0)" class="offcanvas-link" data-target="select-address">Адресс доставки</a>
+                        </div>
+                    </div>
+
                     <div class="cart__order order">
 
                         <div class="order__header">
@@ -276,30 +284,30 @@
                             <textarea class="cart-textarea" id="comment" name="comment" rows="5" placeholder="Комментарий для курьера"></textarea>                               
                         </div>
 
-                        <div class="delivery__change-courier change-courier">
-                            <div class="change-courier__item change-card">
-                                <input id="delivery_courier1" type="radio" name="courierType" class="change-courier__input change-card__input" value="" checked="">
+                        <div class="delivery__change-courier">
+                            <div class="change-card">
+                                <input id="delivery_courier1" type="radio" name="courierType" class="change-card__input" value="" checked="">
                                 <label for="delivery_courier1" class="change-courier__label change-card__label">
-                                    <div class="change-courier__top">
-                                        <div class="change-courier__name change-card__name">Курьером Dalli</div>
-                                        <div class="change-courier__price">300₽</div>
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Курьером Dalli</div>
+                                        <div class="change-card__price">300₽</div>
                                     </div>
-                                    <div class="change-courier__bottom">
-                                        <div class="change-courier__period">от 2х дней</div>
-                                        <div class="change-courier__return">Возврат в течении 14 дней</div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__period">от 2х дней</div>
+                                        <div class="change-card__return">Возврат в течении 14 дней</div>
                                     </div>
                                 </label>
                             </div>
-                            <div class="change-courier__item change-card">
-                                <input id="delivery_courier2" type="radio" name="courierType" class="change-courier__input change-card__input" value="" checked="">
-                                <label for="delivery_courier2" class="change-courier__label change-card__label">
-                                    <div class="change-courier__top">
-                                        <div class="change-courier__name change-card__name">Курьером Dalli</div>
-                                        <div class="change-courier__price">Бесплатно</div>
+                            <div class="change-card">
+                                <input id="delivery_courier2" type="radio" name="courierType" class="change-card__input" value="" checked="">
+                                <label for="delivery_courier2" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Курьером СДЭК</div>
+                                        <div class="change-card__price">Бесплатно</div>
                                     </div>
-                                    <div class="change-courier__bottom">
-                                        <div class="change-courier__period">от 2х дней</div>
-                                        <div class="change-courier__return">Возврат в течении 14 дней</div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__period">от 2х дней</div>
+                                        <div class="change-card__return">Возврат в течении 14 дней</div>
                                     </div>
                                 </label>
                             </div>
@@ -310,37 +318,195 @@
 
                     <div class="delivery__date-time date-time">
                         <div class="date-time__title subtitle">Дата и время доставки</div>
-                        custom selects
+                        <div class="date-time__change">
+                            <div class="dropdown">
+                                <div class="dropdown__button">Дата</div>
+                                <div class="dropdown__content">
+                                    <div class="dropdown__item">27.12.2024, Понедельник</div>
+                                    <div class="dropdown__item dropdown__item_active">28.12.2024, Вторник</div>
+                                    <div class="dropdown__item">29.12.2024, Среда</div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <div class="dropdown__button">Время</div>
+                                <div class="dropdown__content">
+                                    <div class="dropdown__item">с 9:00 до 13:00</div>
+                                    <div class="dropdown__item">с 10:00 до 17:00</div>
+                                    <div class="dropdown__item">с 11:00 до 15:00</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="delivery__payment payment">
                         <div class="payment__title subtitle">Оплата</div>
                         <div class="payment__change">
-                            <div class="payment__item">
-                                <input id="payment_1" type="radio" name="payment" class="payment__input" value="" checked="">
-                                <label for="payment_1" class="payment__label">
-                                    <div class="payment__top">
-                                        <div class="payment__name">Онлайн</div>
-                                        <div class="payment__logo"></div>
+                            <div class="change-card">
+                                <input id="payment_1" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_1" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Онлайн</div>
+                                        <div class="change-card__logo"></div>
                                     </div>
-                                    <div class="payment__info">Оплата на сайте</div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info">Оплата на сайте</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-card">
+                                <input id="payment_2" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_2" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Яндекс Пэй</div>
+                                        <div class="change-card__logo">
+                                            <img src="img/ya_pay_logo.svg" alt="">
+                                            <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>
+                                        </div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info"><img src="img/ya_plus_logo.svg" alt=""><span>2184 балла плюса</span></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-card">
+                                <input id="payment_3" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_3" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">Яндекс Сплит</div>
+                                        <div class="change-card__logo">
+                                            <img src="img/split_logo.svg" alt="">
+                                            <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>
+                                        </div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info"><img src="img/split_value.svg" alt=""></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="change-card">
+                                <input id="payment_4" type="radio" name="payment" class="change-card__input" value="" checked="">
+                                <label for="payment_4" class="change-card__label">
+                                    <div class="change-card__top">
+                                        <div class="change-card__name">При получении</div>
+                                        <div class="change-card__logo"></div>
+                                    </div>
+                                    <div class="change-card__bottom">
+                                        <div class="change-card__info">Наличными или картой</div>
+                                    </div>
                                 </label>
                             </div>
                         </div>
                     </div>
 
-
-
                 </div>
 
-                <div class="cart__total">
-                    123
+                <div class="cart__total total">
+
+                    <div class="total__list">
+                        <div class="total__item total__item_title">
+                            <div class="total__name">Итого</div>
+                            <div class="total__value">24 657 ₽</div>
+                        </div>
+                        <div class="total__item">
+                            <div class="total__name">2 товара на сумму</div>
+                            <div class="total__value">26 157 ₽</div>
+                        </div>
+                        <div class="total__item-wrapper">
+                            <div class="total__item">
+                                <div class="total__name total__name-btn">Ваша скидка</div>
+                                <div class="total__value">-1 500 ₽</div>
+                            </div>
+                            <div class="total__item-content">
+                                <div class="total__item">
+                                    <div class="total__name">Акция 1+1</div>
+                                    <div class="total__value">-1 000 ₽</div>
+                                </div>
+                                <div class="total__item">
+                                    <div class="total__name">Авторизированный пользователь</div>
+                                    <div class="total__value">-500 ₽</div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="total__item">
+                            <div class="total__name">Доставка</div>
+                            <div class="total__value">Бесплатно</div>
+                        </div>
+                        <div class="total__item total__item_total">
+                            <div class="total__name">Итого</div>
+                            <div class="total__value">24 657 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="promocode">
+                        <input type="text" class="promocode__input" value="SALE15">
+                        <button class="promocode__btn-apply">Применить</button>
+                    </div>
+
+                    <div class="certificate">
+                        <input type="text" class="certificate__input" placeholder="Подарочный сертификат">
+                        <button class="promocode__btn-close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+                    </div>
+
+                    <button class="total__submit-btn">Оформить заказ</button>
+
+                    <div class="total__offer-text">
+                        Нажимая «Оформить заказ», Вы подтверждаете, что ознакомились с <a href="#">Условиями программы лояльности Gulliver Club</a>, <a href="#">Политикой Организатора программы об обработке персональных данных</a>, согласны стать участником программы лояльности и <a href="#">даете Организатору согласие на обработку Ваших персональных данных</a>.
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
     
+    <!-- modals -->
+    <div class="offcanvas" id="select-address">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+            <div class="offcanvas__title">Выберите адрес доставки</div>
+            <div class="offcanvas__content">
+                
+            </div>
+    
+        </div>        
+    </div>
+
+
+    <div class="offcanvas" id="return-goods">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+            <div class="offcanvas__title">Возврат товара</div>
+            <div class="offcanvas__content">
+                <div class="offcanvas__text">
+                    <h3>Возврат качественного товара, приобретенного в розничном магазине:</h3>
+                    <p>Возврат товара, приобретенного в розничном магазине, можно осуществить в течение 14 дней только в том магазине, где была совершена покупка.</p>
+                    <p>Для оформления возврата возьмите с собой паспорт и карту, с которой осуществлялась оплата, если покупка была безналичной. </p>
+                    <h3>Возврат товара ненадлежащего качества:</h3>
+                    <p>Если вы обнаружили дефект товара, пожалуйста, </p>
+                    <ul>
+                        <li>заполните форму  или подробно опишите ситуацию в письме, приложите фото или видео, на которых видны дефекты и отправьте на нашу электронную почту help@gulliver.ru.</li>
+                        <li>Мы рассматриваем обращения по товарам, приобретенным как в интернет-магазине, так и в наших розничных магазинах.</li>
+                        <li>Мы уделяем внимание каждому обращению и для того чтобы дать вам ответ нам потребуется не менее 3 рабочих дней.</li>
+                        <li>Для принятия решения компания может запросить экспертное заключение о причинах выявленных недостатков у технолога, в связи с этим срок обработки претензии может быть незначительно увеличен. </li>
+                        <li>Мы свяжемся с вами удобным способом как только обращение будет рассмотрено. </li>
+                    </ul>
+                    <h3>Сроки возврата денежных средств: </h3>
+                    <ul>
+                        <li>Операция по возврату денежных средств будет выполнена в течение 10 дней с момента получения и проверки товара и заявления на складе;</li>
+                        <li>За покупку, оплаченную онлайн, денежные средства вернутся на ту же карту, с которой производилась оплата;</li>
+                        <li>Если заказ был оплачен наличными или картой при получении, денежные средства будут возвращены на ваш расчетный счет по реквизитам, указанным в заявлении на возврат;</li>
+                        <li>При возврате товара надлежащего качества стоимость доставки не компенсируется; </li>
+                        <li>Срок зачисления денежных средств на вашу карту зависит от банка, выпустившего карту; </li>
+                    </ul>
+                    <p>В период государственных праздников возможно увеличение сроков обработки и проведения возвратов ввиду банковских каникул. </p>
+                </div>
+            </div>
+    
+        </div>        
+    </div>
+    <!-- end modals -->
+
     <script src="js/script.js"></script>
 </body>
 </html>

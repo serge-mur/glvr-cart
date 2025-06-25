@@ -44,4 +44,13 @@
         <path d="M10 19C7.49971 15.9378 3 12.2726 3 8C3 4.13401 6.13401 1 10 1C13.866 1 17 4.13401 17 8C17 12.2726 12.5003 15.9378 10 19Z" stroke="#52525B"/>
         <circle cx="10" cy="8" r="2.5" stroke="#52525B"/>
     </symbol>
+    <symbol id="question" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="10" cy="10" r="9.5" stroke="#52525B"/>
+        <circle cx="10" cy="14.25" r="0.75" fill="#52525B"/>
+        <path d="M7.5 7.5C7.5 6 8.5 5 10 5C11.5 5 12.5 6 12.5 7.5C12.5 9.5 10 9.5 10 11.5C10 12 10 12.5 10 12.5" stroke="#52525B"/>
+    </symbol>
+    <symbol id="close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 3L17 17" stroke="#52525B"/>
+        <path d="M17 3L3 17" stroke="#52525B"/>
+    </symbol>
 </svg>
