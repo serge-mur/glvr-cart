@@ -35,18 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const offcanvasClose = offcanvas.querySelector('.offcanvas__close');
         const offcanvasOverlay = offcanvas.querySelector('.offcanvas__overlay');
         const offcanvasWrapper = offcanvas.querySelector('.offcanvas__wrapper');      
-    link.addEventListener('click', () => {
-        offcanvas.classList.add('is-opened');
-        document.body.classList.add("remove-scrolling");
+        link.addEventListener('click', () => {
+            offcanvas.classList.add('is-opened');
+            document.body.classList.add("remove-scrolling");
+        });
+        offcanvasClose.addEventListener('click', () => {
+            offcanvas.classList.remove('is-opened');
+            document.body.classList.remove("remove-scrolling");
+        });
+        offcanvasOverlay.addEventListener('click', () => {
+            offcanvas.classList.remove('is-opened');
+            document.body.classList.remove("remove-scrolling");
+        });
     });
-    offcanvasClose.addEventListener('click', () => {
-        offcanvas.classList.remove('is-opened');
-        document.body.classList.remove("remove-scrolling");
-    });
-    offcanvasOverlay.addEventListener('click', () => {
-        offcanvas.classList.remove('is-opened');
-        document.body.classList.remove("remove-scrolling");
-    });
-});
 
 });

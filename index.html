@@ -287,7 +287,7 @@
                         <div class="delivery__change-courier">
                             <div class="change-card">
                                 <input id="delivery_courier1" type="radio" name="courierType" class="change-card__input" value="" checked="">
-                                <label for="delivery_courier1" class="change-courier__label change-card__label">
+                                <label for="delivery_courier1" class="change-card__label">
                                     <div class="change-card__top">
                                         <div class="change-card__name">Курьером Dalli</div>
                                         <div class="change-card__price">300₽</div>
@@ -360,7 +360,12 @@
                                         <div class="change-card__name">Яндекс Пэй</div>
                                         <div class="change-card__logo">
                                             <img src="img/ya_pay_logo.svg" alt="">
-                                            <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>
+                                            <div class="popover">  
+                                                <div class="popover__title">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>    
+                                                </div>
+                                                <div class="popover__content">недоступна услуга частичного выкупа</div>
+                                            </div> 
                                         </div>
                                     </div>
                                     <div class="change-card__bottom">
@@ -375,7 +380,12 @@
                                         <div class="change-card__name">Яндекс Сплит</div>
                                         <div class="change-card__logo">
                                             <img src="img/split_logo.svg" alt="">
-                                            <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>
+                                            <div class="popover">  
+                                                <div class="popover__title">
+                                                    <svg class="sprite20"><use xlink:href="img/sprites.svg#question"></use></svg>    
+                                                </div>
+                                                <div class="popover__content">недоступна услуга частичного выкупа</div>
+                                            </div> 
                                         </div>
                                     </div>
                                     <div class="change-card__bottom">
@@ -459,15 +469,64 @@
     </div>
     
     <!-- modals -->
-    <div class="offcanvas" id="select-address">
+    <div class="offcanvas offcanvas_sm" id="select-address">
         <div class="offcanvas__overlay"></div>
         <div class="offcanvas__wrapper">
             <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
             <div class="offcanvas__title">Выберите адрес доставки</div>
             <div class="offcanvas__content">
-                
+                <div class="select-adress">
+                    <div class="select-adress__list">
+                        <div class="select-adress__card">
+                            <input id="adress_1" type="radio" name="adress" class="select-adress__input" value="" checked="">
+                            <label for="adress_1" class="select-adress__label">
+                                <div class="select-adress__marker"></div>
+                                <div class="select-adress__content">
+                                    <div class="select-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <div class="select-adress__time">Завтра с 14:00</div>
+                                </div>
+                                <div class="select-adress__control">
+                                    <button class="select-adress__edit"><svg class="sprite20"><use xlink:href="img/sprites.svg#edit"></use></svg></button>
+                                    <button class="select-adress__delete"><svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg></button>
+                                </div>
+                            </label>
+                        </div>                                
+                        <div class="select-adress__card select-adress__card_no-delivery">
+                            <input id="adress_2" type="radio" name="adress" class="select-adress__input" disabled>
+                            <label for="adress_2" class="select-adress__label">
+                                <div class="select-adress__marker"></div>
+                                <div class="select-adress__content">
+                                    <div class="select-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <div class="select-adress__time">Сюда не получится доставить</div>
+                                </div>
+                                <div class="select-adress__control">
+                                    <button class="select-adress__edit"><svg class="sprite20"><use xlink:href="img/sprites.svg#edit"></use></svg></button>
+                                    <button class="select-adress__delete"><svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg></button>
+                                </div>
+                            </label>
+                        </div> 
+                        <div class="select-adress__card">
+                            <input id="adress_3" type="radio" name="adress" class="select-adress__input" value="" checked="">
+                            <label for="adress_3" class="select-adress__label">
+                                <div class="select-adress__marker"></div>
+                                <div class="select-adress__content">
+                                    <div class="select-adress__adress">Нижний Новгород, ул. Центральный проезд Хорошевского Серебряного Бора, д. 14, кв. 18</div>
+                                    <div class="select-adress__time">Завтра с 14:00</div>
+                                </div>
+                                <div class="select-adress__control">
+                                    <button class="select-adress__edit"><svg class="sprite20"><use xlink:href="img/sprites.svg#edit"></use></svg></button>
+                                    <button class="select-adress__delete"><svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg></button>
+                                </div>
+                            </label>
+                        </div>                                 
+                    </div>
+                    <button class="select-adress__add">
+                        <svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg>
+                        <span>Добавить новый адрес </span>
+                    </button>
+                    <button class="select-adress__apply">Привезти сюда</button>
+                </div>                
             </div>
-    
         </div>        
     </div>
 
