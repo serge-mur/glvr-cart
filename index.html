@@ -28,20 +28,29 @@
             <div class="cart__wrapper">
                 <div class="cart__main">
                     
-                    <h1 class="cart__title">Оформление заказа</h1>
+                    <h1 class="cart__title">
+                        <a href="#" class="cart__title-back">
+                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 20L7 14.5L13 9" stroke="#52525B"/>
+                            </svg>
+                        </a>
+                        <span>Оформление заказа</span>
+                    </h1>
 
-                    <div class="test">
-                        <div class="subtitle">test</div>
-                        <div>
-                            <a href="javascript:void(0)" class="offcanvas-link" data-target="return-goods">Возврат товара</a>
-                            <a href="javascript:void(0)" class="offcanvas-link" data-target="select-address">Адресс доставки</a>
+                    <div class="cart__empty cart-empty" style="display: none;">
+                        <div class="cart-empty__wrapper">
+                            <div class="cart-empty__title">Здесь будут отображаться <br> выбранные вами товары</div>
+                            <div class="cart-empty__subtitle">Чтобы сделать заказ, положите товар <br> в корзину и оформите покупку</div>
+                            <a href="#" class="cart-empty__link">
+                                <span>Перейти к покупкам</span>
+                                <svg class="sprite20"><use xlink:href="img/sprites.svg#arrow-right"></use></svg>
+                            </a>
                         </div>
                     </div>
 
                     <div class="cart__order order">
-
                         <div class="order__header">
-                            <div class="order__title"><span>Состав заказа</span><span class="order__count">2 товара</span></div>
+                            <div class="order__title"><span>Состав заказа</span><span class="order__count order__count_err">превышен на 20 товара</span></div>
                             <button class="order__share">
                                 <span>Поделиться корзиной</span>
                                 <svg class="sprite20"><use xlink:href="img/sprites.svg#share"></use></svg>
@@ -293,8 +302,8 @@
                                         <div class="change-card__price">300₽</div>
                                     </div>
                                     <div class="change-card__bottom">
-                                        <div class="change-card__period">от 2х дней</div>
-                                        <div class="change-card__return">Возврат в течении 14 дней</div>
+                                        <div class="change-card__option change-card__option_period">от 2х дней</div>
+                                        <div class="change-card__option change-card__option_return">Возврат в течении 14 дней</div>
                                     </div>
                                 </label>
                             </div>
@@ -306,8 +315,8 @@
                                         <div class="change-card__price">Бесплатно</div>
                                     </div>
                                     <div class="change-card__bottom">
-                                        <div class="change-card__period">от 2х дней</div>
-                                        <div class="change-card__return">Возврат в течении 14 дней</div>
+                                        <div class="change-card__option change-card__option_period">от 2х дней</div>
+                                        <div class="change-card__option change-card__option_return">Возврат в течении 14 дней</div>
                                     </div>
                                 </label>
                             </div>
@@ -457,10 +466,18 @@
                         <button class="promocode__btn-close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
                     </div>
 
-                    <button class="total__submit-btn">Оформить заказ</button>
+                    <button class="total__submit-btn" disabled>Оформить заказ</button>
 
                     <div class="total__offer-text">
                         Нажимая «Оформить заказ», Вы подтверждаете, что ознакомились с <a href="#">Условиями программы лояльности Gulliver Club</a>, <a href="#">Политикой Организатора программы об обработке персональных данных</a>, согласны стать участником программы лояльности и <a href="#">даете Организатору согласие на обработку Ваших персональных данных</a>.
+                    </div>
+
+                    <div style="display: flex;flex-direction: column;gap: 10px;">
+                        <p>modals</p>
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="select-address">Адресс доставки</a>                        
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="return-goods">Возврат товара</a>
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="postpone-goods">Отложить часть товаров</a>
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="cart-map">Карта</a>
                     </div>
                 </div>
 
@@ -530,6 +547,73 @@
         </div>        
     </div>
 
+    <div class="offcanvas" id="postpone-goods">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+            <div class="offcanvas__title">Отложить часть товаров</div>
+            <div class="offcanvas__subtitle">Оставьте до 30 товаров для каждой категории, чтобы оплата при получении стала доступной</div>
+            <div class="offcanvas__content">
+                <div class="products__list">
+                    <div class="products__item">
+                        <div class="products__img">
+                            <img src="img/products_img.webp" alt="">
+                        </div>
+                        <div class="products__title">Синий удлиненный жилет для девочки</div>
+                        <div class="products__price price">
+                            <div class="price__actual">1 299 р.</div>
+                            <div class="price__old">6 699 ₽</div>
+                        </div>                                        
+                        <div class="products__info">
+                            <div class="products__size">Размер: 134</div>
+                            <div class="products__articul">APT. 12011BJC1207</div>                                                
+                        </div>
+                        <div class="products__count">
+                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
+                            <div class="count__value">1 шт.</div>
+                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
+                        </div>
+                        <div class="products__control">
+                            <button class="products__favorite">
+                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
+                            </button>
+                            <button class="products__trash">
+                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products__item">
+                        <div class="products__img">
+                            <img src="img/products_img.webp" alt="">
+                        </div>
+                        <div class="products__title">Синий удлиненный жилет для девочки</div>
+                        <div class="products__price price">
+                            <div class="price__actual">1 299 р.</div>
+                            <div class="price__old">6 699 ₽</div>
+                        </div>                                        
+                        <div class="products__info">
+                            <div class="products__size">Размер: 134</div>
+                            <div class="products__articul">APT. 12011BJC1207</div>                                                
+                        </div>
+                        <div class="products__count">
+                            <button class="count__minus"><svg class="sprite20"><use xlink:href="img/sprites.svg#minus"></use></svg></button>
+                            <div class="count__value">1 шт.</div>
+                            <button class="count__plus"><svg class="sprite20"><use xlink:href="img/sprites.svg#plus"></use></svg></button>
+                        </div>
+                        <div class="products__control">
+                            <button class="products__favorite">
+                                <svg class="sprite20"><use xlink:href="img/sprites.svg#heart"></use></svg>    
+                            </button>
+                            <button class="products__trash">
+                                <svg class="sprite20"><use xlink:href="img/sprites.svg#trash"></use></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="select-adress__apply">Перенести в отложенные товары</button>
+            </div>
+        </div>        
+    </div>
 
     <div class="offcanvas" id="return-goods">
         <div class="offcanvas__overlay"></div>
@@ -564,6 +648,136 @@
     
         </div>        
     </div>
+
+    <div class="offcanvas offcanvas__full" id="cart-map">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+            <div class="cart-map">
+                <div class="cart-map__content">
+                    <div class="cart-map__top">
+                        <div class="cart-map__title">Добавление пункта выдачи</div>
+                        <div class="cart-map__search">
+                            <input type="text" name="search" class="cart-map__search-input" placeholder="Поиск" >
+                            <button class="cart-map__search-btn"></button>
+                        </div>
+                        <div class="cart-map__options">
+                            <div class="cart-checkbox">
+                                <input type="checkbox" id="fitting" class="cart-checkbox__input">
+                                <label for="fitting" class="cart-checkbox__label">Примерка</label>
+                            </div>
+                            <div class="cart-checkbox">
+                                <input type="checkbox" id="receiving" class="cart-checkbox__input">
+                                <label for="receiving" class="cart-checkbox__label">Оплата при получении</label>
+                            </div> 
+                        </div>
+                        <div class="cart-map__info">456 пунктов в г. Москва</div>                        
+                    </div>
+
+                    <div class="cart-map__list">
+                        <div class="change-card">
+                            <input id="pickup_3" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_3" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/cdek_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="change-card">
+                            <input id="pickup_4" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_4" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/boxberry_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="change-card">
+                            <input id="pickup_1" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_1" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/cdek_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="change-card">
+                            <input id="pickup_2" type="radio" name="pickup" class="change-card__input" value="" checked="">
+                            <label for="pickup_2" class="change-card__label">
+                                <div class="change-card__top">
+                                    <div class="change-card__name">Пункт выдачи заказов</div>
+                                    <div class="change-card__logo">
+                                        <img src="img/boxberry_logo.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="change-card__middle">
+                                    <div class="change-card__adress">ул. Малая Семеновская, 28, пав. 51, ТРЦ "Персей"</div>
+                                    <div class="change-card__contacts">
+                                        <div class="change-card__mode">Пн-Вс с 10:00 до 22:00</div>
+                                        <div class="change-card__phone">+7 (909) 950-39-06</div>
+                                    </div>
+                                </div>
+                                <div class="change-card__bottom">
+                                    <div class="change-card__option change-card__option_fitting">Примерочная</div>
+                                    <div class="change-card__option change-card__option_card">Оплата картой</div>
+                                    <div class="change-card__option change-card__option_time">Возврат в течении 14 дней</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cart-map__bottom">
+                        <button class="select-adress__apply cart-map__btn">Доставить сюда</button>
+                    </div>
+                </div>
+                <div class="cart-map__map">
+                    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/?ll=37.617700%2C55.755863&utm_medium=mapframe&utm_source=maps&z=10" style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.617700%2C55.755863&z=10" width="100%" height="700px" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                </div>
+            </div>
+        </div>        
+    </div>    
     <!-- end modals -->
 
     <script src="js/script.js"></script>
