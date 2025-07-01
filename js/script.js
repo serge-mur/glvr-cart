@@ -49,4 +49,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // map events
+    const cartMapContent = document.querySelector('.cart-map__content');
+    const points = document.querySelectorAll('.change-card_point');
+    points.forEach(point => {
+        id = point.dataset.point;
+        let marker = document.querySelector(`.cart-map__marker[data-marker="${id}"]`);
+        // console.log(marker);
+        marker.addEventListener('click', function(e) {
+            // для мобилы
+            cartMapContent.classList.add('is-opened');
+            // удаление активности на всех маркерах
+            document.querySelectorAll('.cart-map__marker').forEach(el => {
+                el.classList.remove('active');
+            });
+            e.target.classList.add('active');
+            point.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // удаление активности на всех элемента списка
+            document.querySelectorAll('.change-card_point').forEach(el => {
+                el.classList.remove('active');
+            });             
+            point.classList.add('active');
+            point.querySelector('.change-card__input').checked = true;
+        });
+        point.addEventListener('click', function(e) {
+            document.querySelectorAll('.cart-map__marker').forEach(el => {
+                el.classList.remove('active');
+            });
+            marker.classList.add('active');
+        });
+    });
+    // закрытие элемента списка для мобилы
+    document.querySelector('.cart-map__content-close').addEventListener('click', function(e) {
+        cartMapContent.classList.toggle('is-opened');
+    });
+
+
+
+
 });
