@@ -50,7 +50,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // map events
+    const cartMap = document.querySelector('.cart-map');
     const cartMapContent = document.querySelector('.cart-map__content');
+    const gotoMap = document.querySelector('.goto-map');
+    const gotoMapBtn = document.querySelector('.goto-map__btn');
+    const gotoListBtn = document.querySelector('.map__goto-list');
+    gotoMapBtn.addEventListener('click', function(e) {
+        cartMap.classList.add('is-map');
+        // показываем поиск
+        cartMapContent.classList.add('is-opened', 'is-search');
+    });
+    gotoListBtn.addEventListener('click', function(e) {
+        cartMap.classList.remove('is-map');
+        cartMapContent.classList.remove('is-opened', 'is-search');
+    });
+
     const points = document.querySelectorAll('.change-card_point');
     points.forEach(point => {
         id = point.dataset.point;
@@ -58,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // console.log(marker);
         marker.addEventListener('click', function(e) {
             // для мобилы
-            cartMapContent.classList.add('is-opened');
+            cartMapContent.classList.add('is-opened', 'is-point');
             // удаление активности на всех маркерах
             document.querySelectorAll('.cart-map__marker').forEach(el => {
                 el.classList.remove('active');
@@ -81,7 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // закрытие элемента списка для мобилы
     document.querySelector('.cart-map__content-close').addEventListener('click', function(e) {
-        cartMapContent.classList.toggle('is-opened');
+        cartMapContent.classList.remove('is-opened');
+        setTimeout(() => {
+            cartMapContent.classList.remove('is-search', 'is-point');
+        }, 250);
     });
 
 
