@@ -50,17 +50,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // map events
+    const offcanvasClose = document.querySelector('#cart-map .offcanvas__close');
     const cartMap = document.querySelector('.cart-map');
     const cartMapContent = document.querySelector('.cart-map__content');
     const gotoMap = document.querySelector('.goto-map');
     const gotoMapBtn = document.querySelector('.goto-map__btn');
     const gotoListBtn = document.querySelector('.map__goto-list');
     gotoMapBtn.addEventListener('click', function(e) {
+        // стили крестика
+        offcanvasClose.classList.remove('offcanvas__close_list');
+        offcanvasClose.classList.add('offcanvas__close_map');
         cartMap.classList.add('is-map');
         // показываем поиск
         cartMapContent.classList.add('is-opened', 'is-search');
     });
     gotoListBtn.addEventListener('click', function(e) {
+        offcanvasClose.classList.remove('offcanvas__close_map');
+        offcanvasClose.classList.add('offcanvas__close_list');
         cartMap.classList.remove('is-map');
         cartMapContent.classList.remove('is-opened', 'is-search');
     });

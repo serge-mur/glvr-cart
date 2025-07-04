@@ -49,7 +49,10 @@
 
                     <div class="cart__order order">
                         <div class="order__header">
-                            <div class="order__title"><span>Состав заказа</span><span class="order__count order__count_err">превышен на 20 товара</span></div>
+                            <div class="order__title">
+                                <span>Состав заказа</span>
+                                <span class="order__count order__count_err">превышен на 20 товара</span>
+                            </div>
                             <button class="order__share">
                                 <span>Поделиться корзиной</span>
                                 <svg class="sprite20"><use xlink:href="img/sprites.svg#share"></use></svg>
@@ -546,15 +549,26 @@
         </div>        
     </div>
 
-    <div class="offcanvas" id="postpone-goods">
+    <div class="offcanvas offcanvas_sm" id="postpone-goods">
         <div class="offcanvas__overlay"></div>
         <div class="offcanvas__wrapper">
             <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
             <div class="offcanvas__title">Отложить часть товаров</div>
             <div class="offcanvas__subtitle">Оставьте до 30 товаров для каждой категории, чтобы оплата при получении стала доступной</div>
+            <div class="order__header">
+                <div class="order__title">
+                    <span>Состав заказа</span>
+                    <span class="order__count order__count_err">превышен на 20 товара</span>
+                </div>
+            </div>
             <div class="offcanvas__content">
                 <div class="products__list">
-                    <div class="products__item">
+                    <div class="products__item products__item_select">
+                        <div class="products__select">
+                            <div class="cart-checkbox">
+                                <input type="checkbox" id="item_1" class="cart-checkbox__input">
+                            </div>
+                        </div>
                         <div class="products__img">
                             <img src="img/products_img.webp" alt="">
                         </div>
@@ -581,7 +595,12 @@
                             </button>
                         </div>
                     </div>
-                    <div class="products__item">
+                    <div class="products__item products__item_select">
+                        <div class="products__select">
+                            <div class="cart-checkbox">
+                                <input type="checkbox" id="item_1" class="cart-checkbox__input">
+                            </div>
+                        </div>
                         <div class="products__img">
                             <img src="img/products_img.webp" alt="">
                         </div>
@@ -648,10 +667,10 @@
         </div>        
     </div>
 
-    <div class="offcanvas offcanvas__full is-opened" id="cart-map">
+    <div class="offcanvas offcanvas__full" id="cart-map">
         <div class="offcanvas__overlay"></div>
         <div class="offcanvas__wrapper">
-            <button class="offcanvas__close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
+            <button class="offcanvas__close offcanvas__close_list"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
             <div class="cart-map">
                 <div class="cart-map__content">
                     <button class="cart-map__content-close"><svg class="sprite20"><use xlink:href="img/sprites.svg#close"></use></svg></button>
